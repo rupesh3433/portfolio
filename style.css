@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  #header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/HackerPhoto.png);
+    background-size: auto 70%;
+    background-position: auto;
+  }
+  
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .container nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(30, 28, 28);
+    height: 70px;
+  }
+  
+  .container nav .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .container nav h1 {
+    margin-left: 10px;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+  }
+  
+  .logo {
+    height: 60px;
+    margin-left: 20px;
+    
+  }
+  
+  .container ul {
+    display: flex;
+    
+  }
+  
+  .container li {
+    list-style: none;
+    margin: 10px 30px;
+    position: relative;
+  }
+  
+  ul li a {
+    color: #d0dff1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    transition: color 0.1s ease;
+  }
+  
+  ul li:hover a {
+    color: #09a0f1;
+  }
+  
+  ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #09a0f1;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+  }
+  
+  ul li:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .navbar-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-right: 10px;
+  }
+  
+  .navbar-button > button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(251, 246, 246);
+    color: #09a0f1;
+    cursor: pointer;
+  }
+  
+  .navbar-button > button:hover {
+    color: rgb(251, 246, 246);
+    background-color: #09a0f1;
+  }
+  
+  .navbar-button > input {
+    padding: 3px 5px;
+    font-size: 17px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px 0px 0px 5px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container nav {
+      justify-content: space-around;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .container nav h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+  
+    .container ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .container li {
+      margin: 10px 20px;
+    }
+  }
+  
+
+/* code for slider */
+ .slider {
+  width: 50%;
+  height: 500px;
+  position: relative;
+  margin: 100px 400px 0px 400px !important;
+  border-radius: 30px 0px;
+  overflow: hidden;
+  background-size: 100% 100%;
+  box-shadow: 1px 2px 10px 4px #09a0f1;
+
+}
+
+.slide {
+  padding: 0 !important;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+@keyframes slideAnimation {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+}
+
+.slide:nth-child(1) {
+  background-image: url(img/rup5.jfif);
+}
+
+.slide:nth-child(2) {
+  background-image: url(img/rup14.jfif);
+}
+
+.slide:nth-child(3) {
+  background-image: url(img/rup13.jfif);
+}
+
+
+.about {
+  margin: 0px auto;
+  background-image: url(img/background.jfif);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.textfile {
+  padding: 20px 30px;
+  color: white;
+  background-color: #333;
+  border-radius: 10px;
+  max-width: 800px;
+   box-shadow: 1px 2px 10px 4px #c0c0c0;
+}
+.textfile > h2{
+  margin-bottom: 5px;
+  color: #09a0f1;
+  position: relative;
+}
+.textfile > h2 > span{
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 100;
+  width: 110px;
+  height: 2px;
+  background-color: #53c3ff;
+  transform-origin: center;
+}
+.textfile > p{
+  text-align: justify;
+  margin-top: 15px;
+}
+.about div img {
+  margin-top: 10px;
+  width: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 1px 2px 8px 4px #a183fb;
+
+}
